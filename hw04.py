@@ -12,17 +12,17 @@ def check_text():
     """Asks for sentences until the user uses the secret word or dog/Dog."""
     while True:
         sentence = input("Give me a sentence: ")
-        # check if the sentence has the secret word first
+        # checks if the sentence has the secret word first
         if secret_word in sentence:
             print("You used the secret word!")
             # stops the loop, since the match was found
             break
-        # check if the sentence has dog or Dog
+        # checks if the sentence has dog or Dog
         elif "dog" in sentence or "Dog" in sentence:
             # outer single quotes let the inner "dog" quotes show
             print('You used the word "dog" or the word "Dog"!')
             break
-        # neither words were used, so the loop repeats
+        # neither words are used, so the loop repeats
         else:
             print("Try again")
 
@@ -56,19 +56,43 @@ def get_special_numbers():
         # skips multiples of 5
         if num % 5 == 0:
             continue
-        # it passed every rule
+        # it passes every rule
         print(num)
 
 # Task 4.a
 def my_for_loop():
-    """ Add your docstring """
-    pass
-
+    """Labels the letters of a 2-5 character word as a vowel or consonant."""
+    word = input("Give me a string: ")
+    # rejects words that have the wrong length or with spaces; " " checks for a space
+    if len(word) < 2 or len(word) > 5 or " " in word:
+        print("bad word")
+        return
+    #looks at each letter
+    for letter in word:
+        if letter in "aeiouAEIOU":
+            print(f"letter {letter} is a vowel")
+        else:
+            print(f"letter {letter} is a consonant")
+            
 # Task 4.b
 def my_while_loop():
-    """ Add your docstring """
-    pass
-
+    """Shows an a/b/c menu until the user picks b (stop) or c (exit)."""
+    while True:
+        option = input("Choose on option: a, b, or c: ")
+        # a: shows the menu again
+        if option == "a":
+            continue
+        # b: says goodbye and stops the loop
+        elif option == "b":
+            print("Goodbye")
+            break
+        # c: ends the whole program
+        elif option == "c":
+            sys.exit()
+        # anything else is not an option
+        else:
+            print("try again")
+        
 # ---------------------------------------
 # Do not modify anything below this line
 # ---------------------------------------
