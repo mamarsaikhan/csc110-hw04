@@ -28,11 +28,21 @@ def check_text():
 
 # Task 2
 def check_greater():
-    """ Add your docstring """
-    pass
-
-
-
+    """Asks for two integers, compares them, and says which is greater."""
+    while True:
+        first_integer = int(input("Give me a first integer: "))
+        second_integer = int(input("Give me a second integer: "))
+        # compares the two numbers
+        if first_integer > second_integer:
+            print("First is Greater")
+            break
+        elif second_integer > first_integer:
+            print("Second is Greater")
+            break
+        # they are equal, so the loop repeats
+        else:
+            print("Try again")
+        
 # Task 3
 def get_special_numbers():
     """ Add your docstring """
