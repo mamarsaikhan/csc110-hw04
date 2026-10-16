@@ -45,9 +45,19 @@ def check_greater():
         
 # Task 3
 def get_special_numbers():
-    """ Add your docstring """
-    pass
-
+    """Prints the odd multiples of 3 from 1 to 40, that are not multiples of 5."""
+    for num in range(1,41): # the range has to end with 41 for 40 to be included
+        # skips even numbers; % gives the remainder
+        if num % 2 == 0:
+            continue
+        # skips numbers that are not multiples of 3; != means not equal
+        if num % 3 != 0:
+            continue
+        # skips multiples of 5
+        if num % 5 == 0:
+            continue
+        # it passed every rule
+        print(num)
 
 # Task 4.a
 def my_for_loop():
