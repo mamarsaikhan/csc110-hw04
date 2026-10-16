@@ -1,5 +1,5 @@
 # ------------------------------------------------------
-#        Name: (put your name here)
+#        Name: Marla Amarsaikhan
 #       Peers: (add any collaborators)
 #  References: (anything you checked to solve this)
 # ------------------------------------------------------
@@ -9,10 +9,22 @@ secret_word = "food"
 
 # Task 1
 def check_text():
-    """ Add your docstring """
-    pass
-
-
+    """Asks for sentences until the user uses the secret word or dog/Dog."""
+    while True:
+        sentence = input("Give me a sentence: ")
+        # check if the sentence has the secret word first
+        if secret_word in sentence:
+            print("You used the secret word!")
+            # stops the loop, since the match was found
+            break
+        # check if the sentence has dog or Dog
+        elif "dog" in sentence or "Dog" in sentence:
+            # outer single quotes let the inner "dog" quotes show
+            print('You used the word "dog" or the word "Dog"!')
+            break
+        # neither words were used, so the loop repeats
+        else:
+            print("Try again")
 
 # Task 2
 def check_greater():
